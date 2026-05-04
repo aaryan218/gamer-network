@@ -1,22 +1,28 @@
 import { Outlet } from "react-router-dom";
+import Navbar from "../components/layout/Navbar";
+import Sidebar from "../components/layout/Sidebar";
 
 const MainLayout = () => {
   return (
-    <>
-      {/* Navbar (full width) */}
-      <div className="navbar">Navbar</div>
-
-      {/* Page container */}
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "0 var(--space-lg)",
+    <div className="app-container" style={{ display: 'flex', minHeight: '100vh', background: 'var(--color-black)' }}>
+      <Navbar />
+      <Sidebar />
+      <main 
+        className="main-content" 
+        style={{ 
+          flex: 1, 
+          marginLeft: '308px',
+          marginTop: '90px',
+          padding: '24px',
+          maxWidth: 'calc(100vw - 308px)',
+          boxSizing: 'border-box'
         }}
       >
-        <Outlet />
-      </div>
-    </>
+        <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+          <Outlet />
+        </div>
+      </main>
+    </div>
   );
 };
 

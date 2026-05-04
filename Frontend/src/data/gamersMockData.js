@@ -1,7 +1,7 @@
 export const primaryNav = ["Feed", "Network", "Jobs", "Messages", "Events"];
 
 export const gamerProfile = {
-  name: "Aaryan Blaze",
+  name: "Aaryan ",
   title: "Esports Analyst | Valorant Strategist",
   location: "Delhi, India",
   followers: 8420,
@@ -24,7 +24,7 @@ export const feedPosts = [
   },
   {
     id: 2,
-    author: "LunaPlays",
+    author: "Ansh",
     role: "Content Creator • 5h",
     content:
       "Hiring a part-time video editor for long-form gameplay breakdowns. If you love storytelling + fast paced edits, DM with your portfolio.",
@@ -34,7 +34,7 @@ export const feedPosts = [
   },
   {
     id: 3,
-    author: "RogueOps",
+    author: "Kunal",
     role: "Pro Player • 8h",
     content:
       "Reached top 50 this season. Biggest lesson: consistent warm-up routine + mental reset between losses. What routine works for you?",
