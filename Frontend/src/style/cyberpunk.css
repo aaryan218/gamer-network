@@ -12,7 +12,7 @@
   --color-border-glow: rgba(0, 245, 255, 0.4);
   --color-text-primary: #FFFFFF;
   --color-text-secondary: #A0AEC0;
-  
+
   /* Glassmorphism */
   --glass-bg: rgba(13, 13, 13, 0.6);
   --glass-border: 1px solid rgba(255, 255, 255, 0.1);
@@ -30,27 +30,19 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: 
+  background-image:
     radial-gradient(circle at 15% 50%, rgba(124, 58, 237, 0.08), transparent 25%),
     radial-gradient(circle at 85% 30%, rgba(0, 245, 255, 0.08), transparent 25%);
   background-attachment: fixed;
 }
 
-/* Custom Scope Cursor */
-* {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="%2300F5FF" stroke-width="1.5"/><line x1="12" y1="0" x2="12" y2="24" stroke="%2300F5FF" stroke-width="1.5"/><line x1="0" y1="12" x2="24" y2="12" stroke="%2300F5FF" stroke-width="1.5"/><circle cx="12" cy="12" r="1.5" fill="%2300F5FF"/></svg>') 12 12, crosshair !important;
-}
 
-/* Custom Hover Cursor for interactables */
-button, a, input, select, textarea, [style*="cursor: pointer"], [role="button"] {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="%237C3AED" stroke-width="1.5"/><line x1="12" y1="0" x2="12" y2="24" stroke="%237C3AED" stroke-width="1.5"/><line x1="0" y1="12" x2="24" y2="12" stroke="%237C3AED" stroke-width="1.5"/><circle cx="12" cy="12" r="1.5" fill="%237C3AED"/></svg>') 12 12, pointer !important;
-}
-
-button:hover, a:hover, [style*="cursor: pointer"]:hover, [role="button"]:hover {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="%23F59E0B" stroke-width="2"/><line x1="12" y1="0" x2="12" y2="24" stroke="%23F59E0B" stroke-width="2"/><line x1="0" y1="12" x2="24" y2="12" stroke="%23F59E0B" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="%23F59E0B"/></svg>') 12 12, pointer !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 0.5px;
 }
