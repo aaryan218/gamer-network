@@ -1,0 +1,181 @@
+/* Cyberpunk UI Styles */
+
+:root {
+  /* Color Palette */
+  --color-black: #0D0D0D;
+  --color-purple: #7C3AED;
+  --color-purple-light: #9D64FF;
+  --color-blue: #00F5FF;
+  --color-blue-dark: #00B8CC;
+  --color-bg-panel: rgba(20, 20, 25, 0.7);
+  --color-border: rgba(124, 58, 237, 0.3);
+  --color-border-glow: rgba(0, 245, 255, 0.4);
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #A0AEC0;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(13, 13, 13, 0.6);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(12px);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-purple) 0%, var(--color-blue) 100%);
+  --gradient-hover: linear-gradient(135deg, var(--color-purple-light) 0%, var(--color-blue-dark) 100%);
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--color-black);
+  color: var(--color-text-primary);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image:
+    radial-gradient(circle at 15% 50%, rgba(124, 58, 237, 0.08), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(0, 245, 255, 0.08), transparent 25%);
+  background-attachment: fixed;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Typography Utilities */
+.heading-cyber {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-neon-purple {
+  color: var(--color-purple);
+  text-shadow: 0 0 8px rgba(124, 58, 237, 0.5);
+}
+
+.text-neon-blue {
+  color: var(--color-blue);
+  text-shadow: 0 0 8px rgba(0, 245, 255, 0.5);
+}
+
+/* Glass Panels */
+.glass-panel {
+  background: var(--color-bg-panel);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: var(--color-border);
+  box-shadow: 0 8px 32px 0 rgba(124, 58, 237, 0.2);
+}
+
+/* Neon Buttons */
+.btn-neon {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-purple);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.2), inset 0 0 10px rgba(124, 58, 237, 0.1);
+}
+
+.btn-neon:hover {
+  background: var(--color-purple);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.6), inset 0 0 15px rgba(124, 58, 237, 0.4);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.btn-neon.blue {
+  border-color: var(--color-blue);
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.2), inset 0 0 10px rgba(0, 245, 255, 0.1);
+}
+
+.btn-neon.blue:hover {
+  background: var(--color-blue);
+  color: var(--color-black);
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.6), inset 0 0 15px rgba(0, 245, 255, 0.4);
+}
+
+.btn-gradient {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: var(--gradient-hover);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-purple);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-blue);
+}
+
+/* Utilities */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
